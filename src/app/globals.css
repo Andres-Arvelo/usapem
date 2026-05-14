@@ -398,7 +398,6 @@ a {
 }
 
 .content-section,
-.service-grid,
 .project-grid,
 .contact-layout {
   width: min(1180px, calc(100% - 48px));
@@ -413,7 +412,6 @@ a {
 }
 
 .content-section h2,
-.service-card h2,
 .project-card h2,
 .contact-panel h2 {
   margin: 0 0 12px;
@@ -423,7 +421,6 @@ a {
 }
 
 .content-section p,
-.service-card p,
 .project-card p,
 .contact-panel p {
   margin: 0;
@@ -432,14 +429,12 @@ a {
   line-height: 1.7;
 }
 
-.service-grid,
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
 }
 
-.service-card,
 .project-card,
 .contact-panel {
   border: 1px solid #e4e4e8;
@@ -448,12 +443,143 @@ a {
   box-shadow: 0 18px 40px rgba(31, 29, 42, 0.07);
 }
 
-.service-card {
-  padding: 28px;
-}
-
 .project-card {
   overflow: hidden;
+}
+
+.services-page {
+  padding: 58px 0 76px;
+  background: #ffffff;
+}
+
+.services-page h1 {
+  margin: 0 0 44px;
+  color: #050505;
+  font-size: clamp(2.45rem, 4.4vw, 3.25rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 6px;
+  text-align: center;
+}
+
+.services-showcase {
+  display: grid;
+  gap: 44px 0;
+}
+
+.service-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.92fr);
+  align-items: center;
+  gap: clamp(48px, 6vw, 78px);
+  width: min(1158px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+.service-feature-reversed {
+  grid-template-columns: minmax(360px, 0.92fr) minmax(0, 1fr);
+}
+
+.service-feature-reversed .service-feature-image {
+  order: 2;
+}
+
+.service-feature-reversed .service-feature-copy {
+  order: 1;
+}
+
+.service-feature-image {
+  min-height: 278px;
+  background-image: var(--feature-image);
+  background-position: center;
+  background-size: cover;
+}
+
+.service-feature-copy {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.service-feature-copy h2 {
+  margin: 0 0 24px;
+  color: #050505;
+  font-size: clamp(1.4rem, 2.25vw, 1.55rem);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: 1.5px;
+}
+
+.service-feature-copy p {
+  max-width: 560px;
+  margin: 0;
+  color: #303440;
+  font-size: 15.5px;
+  line-height: 1.58;
+}
+
+.service-feature-copy .reality-button {
+  margin-top: 28px;
+}
+
+.service-detail-page {
+  padding: 78px 0 82px;
+  background: #ffffff;
+}
+
+.service-detail-page h1 {
+  margin: 0 0 42px;
+  color: #050505;
+  font-size: clamp(2.5rem, 4.6vw, 3.45rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.service-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 354px;
+  align-items: start;
+  gap: clamp(56px, 8vw, 116px);
+  width: min(1150px, calc(100% - 96px));
+  margin: 0 auto;
+}
+
+.service-detail-copy {
+  padding-top: 2px;
+}
+
+.service-detail-copy h2 {
+  margin: 0 0 50px;
+  color: #050505;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: 1.3px;
+}
+
+.service-detail-copy ul {
+  list-style: disc;
+  max-width: 720px;
+  margin: 0 0 0 46px;
+  padding: 0 0 0 16px;
+  color: #3b4150;
+  font-size: 15.5px;
+  line-height: 1.6;
+}
+
+.service-detail-copy li {
+  padding-left: 2px;
+}
+
+.service-detail-image {
+  width: 354px;
+  min-height: 267px;
+  margin-top: 2px;
+  background-image: var(--detail-image);
+  background-position: center;
+  background-size: cover;
 }
 
 .project-card > div:last-child {
@@ -556,47 +682,12 @@ a {
   gap: 18px;
 }
 
-.footer-logo {
-  position: relative;
-  display: inline-flex;
-  align-items: flex-end;
+.footer-logo-image {
+  width: clamp(150px, 16vw, 214px);
+  height: auto;
   padding-right: 18px;
   border-right: 3px solid rgba(255, 255, 255, 0.88);
-  color: #ffffff;
-  font-family: Arial Black, Arial, Helvetica, sans-serif;
-  font-size: clamp(2.7rem, 4vw, 4rem);
-  font-weight: 900;
-  line-height: 0.82;
-}
-
-.footer-logo-text {
-  display: inline-block;
-}
-
-.footer-logo-mark {
-  position: relative;
-  display: inline-block;
-  margin-left: 2px;
-  color: rgba(255, 255, 255, 0.78);
-  font-style: italic;
-}
-
-.footer-logo-mark::before,
-.footer-logo-mark::after {
-  position: absolute;
-  right: -6px;
-  left: 10px;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.78);
-  content: "";
-}
-
-.footer-logo-mark::before {
-  top: -3px;
-}
-
-.footer-logo-mark::after {
-  bottom: -6px;
+  object-fit: contain;
 }
 
 .footer-brand-name {
@@ -756,17 +847,73 @@ a {
   }
 
   .content-section,
-  .service-grid,
   .project-grid,
   .contact-layout {
     width: min(100% - 40px, 680px);
   }
 
   .content-section,
-  .service-grid,
   .project-grid,
   .contact-layout {
     grid-template-columns: 1fr;
+  }
+
+  .services-page {
+    padding-top: 42px;
+    padding-bottom: 58px;
+  }
+
+  .services-page h1 {
+    margin-bottom: 34px;
+    letter-spacing: 4px;
+  }
+
+  .services-showcase {
+    gap: 36px;
+  }
+
+  .service-feature,
+  .service-feature-reversed {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    width: min(100% - 40px, 640px);
+  }
+
+  .service-feature-reversed .service-feature-image,
+  .service-feature-reversed .service-feature-copy {
+    order: initial;
+  }
+
+  .service-feature-image {
+    min-height: 250px;
+  }
+
+  .service-detail-page {
+    padding: 54px 0 64px;
+  }
+
+  .service-detail-page h1 {
+    margin-bottom: 34px;
+    letter-spacing: 4px;
+  }
+
+  .service-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    width: min(100% - 40px, 680px);
+  }
+
+  .service-detail-copy h2 {
+    margin-bottom: 28px;
+  }
+
+  .service-detail-copy ul {
+    margin-left: 18px;
+  }
+
+  .service-detail-image {
+    width: 100%;
+    min-height: 280px;
   }
 
   .footer-content {
@@ -835,6 +982,58 @@ a {
     font-size: 21px;
   }
 
+  .services-page {
+    padding-top: 34px;
+    padding-bottom: 48px;
+  }
+
+  .services-page h1 {
+    margin-bottom: 28px;
+    font-size: 2.15rem;
+    letter-spacing: 3px;
+  }
+
+  .service-feature,
+  .service-feature-reversed {
+    width: min(100% - 32px, 500px);
+  }
+
+  .service-feature-image {
+    min-height: 208px;
+  }
+
+  .service-feature-copy h2 {
+    margin-bottom: 16px;
+    font-size: 1.28rem;
+    letter-spacing: 1px;
+  }
+
+  .service-feature-copy p {
+    font-size: 15px;
+  }
+
+  .service-detail-page {
+    padding: 42px 0 54px;
+  }
+
+  .service-detail-page h1 {
+    font-size: 2.05rem;
+    letter-spacing: 3px;
+  }
+
+  .service-detail-copy h2 {
+    font-size: 21px;
+  }
+
+  .service-detail-copy ul {
+    margin-left: 0;
+    font-size: 15px;
+  }
+
+  .service-detail-image {
+    min-height: 220px;
+  }
+
   .about-title {
     min-height: 170px;
     padding: 30px 20px 38px;
@@ -873,7 +1072,7 @@ a {
     gap: 14px;
   }
 
-  .footer-logo {
+  .footer-logo-image {
     padding-right: 0;
     border-right: 0;
   }

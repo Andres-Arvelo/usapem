@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const contactItems = [
   {
     icon: "ig",
@@ -63,10 +65,13 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="footer-content">
         <div className="footer-brand" aria-label="PEM">
-          <span className="footer-logo">
-            <span className="footer-logo-text">PE</span>
-            <span className="footer-logo-mark">M</span>
-          </span>
+          <Image
+            className="footer-logo-image"
+            src="/images/PEM logo.jpg"
+            alt="PEM"
+            width={214}
+            height={92}
+          />
           <span className="footer-brand-name">
             Professional
             <br />
@@ -94,7 +99,7 @@ export function SiteFooter() {
       </div>
 
       <p className="footer-copyright">
-        © Copyright 2026. All Rights Reserved.
+        Copyright © 2026 USAPEM - All Rights Reserved.
       </p>
     </footer>
   );
