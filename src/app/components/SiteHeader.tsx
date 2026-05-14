@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 type SiteHeaderProps = {
@@ -16,8 +17,14 @@ export function SiteHeader({ activePath }: SiteHeaderProps) {
   return (
     <header className="site-header" aria-label="Primary navigation">
       <Link className="logo" href="/" aria-label="PEM home">
-        <span className="logo-text">PE</span>
-        <span className="logo-mark">M</span>
+        <Image
+          className="header-logo-image"
+          src="/images/PEM logo.png"
+          alt="PEM"
+          width={237}
+          height={122}
+          priority
+        />
       </Link>
 
       <nav className="main-nav">

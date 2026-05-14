@@ -8,7 +8,7 @@ const contactItems = [
   },
   {
     icon: "pin",
-    label: "P.E.M. • Orlando, FL",
+    label: "P.E.M. \u2022 Orlando, FL",
   },
   {
     icon: "fb",
@@ -67,10 +67,10 @@ export function SiteFooter() {
         <div className="footer-brand" aria-label="PEM">
           <Image
             className="footer-logo-image"
-            src="/images/PEM logo.jpg"
+            src="/images/PEM logo.png"
             alt="PEM"
-            width={214}
-            height={92}
+            width={237}
+            height={122}
           />
           <span className="footer-brand-name">
             Professional
@@ -99,7 +99,7 @@ export function SiteFooter() {
       </div>
 
       <p className="footer-copyright">
-        Copyright © 2026 USAPEM - All Rights Reserved.
+        Copyright &copy; 2026 USAPEM - All Rights Reserved.
       </p>
     </footer>
   );

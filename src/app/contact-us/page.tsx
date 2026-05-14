@@ -5,38 +5,52 @@ export default function ContactUsPage() {
     <main className="site-shell">
       <SiteHeader activePath="/contact-us" />
 
-      <section className="page-hero">
-        <p className="page-kicker">Contact Us</p>
-        <h1>Let&apos;s talk about your next project.</h1>
-        <p>
-          Replace the placeholders below with your phone number, email, office
-          location, and preferred contact details.
-        </p>
-      </section>
+      <section className="contact-page" aria-labelledby="contact-title">
+        <h1 id="contact-title">CONTACT US</h1>
 
-      <section className="contact-layout">
-        <div className="contact-panel">
-          <h2>Contact Details</h2>
-          <p><strong>Phone:</strong> (000) 000-0000</p>
-          <p><strong>Email:</strong> info@usapem.com</p>
-          <p><strong>Location:</strong> City, State</p>
+        <div className="contact-layout">
+          <form className="contact-form">
+            <h2>Drop us a line!</h2>
+
+            <input type="text" name="name" placeholder="Name" />
+            <input type="email" name="email" placeholder="Email*" required />
+            <textarea name="message" rows={7} placeholder="Message" />
+
+            <button type="submit">SEND</button>
+
+            <p className="contact-recaptcha">
+              This site is protected by reCAPTCHA and the Google{" "}
+              <a href="https://policies.google.com/privacy">Privacy Policy</a>{" "}
+              and{" "}
+              <a href="https://policies.google.com/terms">Terms of Service</a>{" "}
+              apply.
+            </p>
+          </form>
+
+          <div className="contact-info">
+            <h2>CONTACT INFO</h2>
+            <p>
+              Our firm is conveniently based in Orlando, serving clients across
+              the entire State of Florida. As a leading consulting civil
+              engineering firm, we specialize in providing comprehensive
+              solutions tailored to your needs.
+            </p>
+            <p>
+              For more information about Professional Engineering Management
+              and how we can assist with your projects, please feel free to
+              contact us directly.
+            </p>
+
+            <h3>USAPEM</h3>
+            <p>9582 Cypress Pine Street, Orlando, Florida 32827, United States</p>
+            <p>
+              Phone Number: <strong>407-832-1390</strong>
+            </p>
+            <p>
+              Email: <strong>aarvelo@usapem.com</strong>
+            </p>
+          </div>
         </div>
-
-        <form className="contact-form">
-          <label>
-            Name
-            <input type="text" name="name" />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" />
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows={5} />
-          </label>
-          <button type="submit">SEND MESSAGE</button>
-        </form>
       </section>
     </main>
   );
