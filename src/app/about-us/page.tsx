@@ -5,30 +5,67 @@ export default function AboutUsPage() {
     <main className="site-shell">
       <SiteHeader activePath="/about-us" />
 
-      <section className="page-hero">
-        <p className="page-kicker">About Us</p>
-        <h1>Engineering practical, dependable project solutions.</h1>
-        <p>
-          PEM supports construction and engineering work with clear planning,
-          careful coordination, and a commitment to strong project delivery.
-        </p>
+      <section className="about-title" aria-labelledby="about-title">
+        <h1 id="about-title">ABOUT USAPEM</h1>
       </section>
 
-      <section className="content-section">
-        <div>
-          <h2>Who We Are</h2>
+      <section className="about-layout" aria-label="About USAPEM">
+        <div className="about-copy">
+          <h2>ABOUT US</h2>
+          <h3>ABOUT US</h3>
           <p>
-            Add your company story here: when PEM started, what areas you serve,
-            and what makes your team trusted by clients and partners.
+            Professional Engineering Management (PEM) offers comprehensive civil
+            engineering services and construction management for commercial,
+            residential, and industrial projects. Our services include planning,
+            evaluation, design, permitting, and construction management of civil
+            and environmental projects. Our team comprises licensed
+            professionals with specialized engineering skills and extensive
+            experience.
+          </p>
+          <p>
+            PEM is committed to delivering our clients&apos; projects on time and
+            within budget. Leveraging over 20 years of experience, we manage
+            every phase of a project from planning through design and
+            construction. Additionally, we collaborate with top-tier architects,
+            planners, surveyors, and environmental and geotechnical consultants
+            to ensure we have the full range of expertise required for
+            successful project execution.
+          </p>
+
+          <h3>VISION</h3>
+          <p>
+            PEM&apos;s vision is to grow and be the company of choice by:
+            <br />
+            Being a recognized leader in the industry
+            <br />
+            Creating exceptional value for our clients
+            <br />
+            Building long-term relationships
+            <br />
+            Capitalizing on opportunities to strengthen the company
+          </p>
+
+          <h3>MISSION</h3>
+          <p>
+            PEM&apos;s mission is to deliver high-quality and efficient professional
+            services in an environment of integrity, honesty, and respect.
+            <br />
+            Our professional staff is a key asset for both our company and our
+            clients. Principal members of our firm bring over 20 years of
+            experience in assisting with the design, permitting, and
+            construction of multidisciplinary projects. We ensure that our
+            services adhere to local, state, and federal regulations while
+            focusing on cost-effective and maintainable construction features.
+            Additionally, we are committed to addressing scheduling concerns and
+            adhering strictly to budgetary constraints on all projects.
           </p>
         </div>
-        <div>
-          <h2>Our Approach</h2>
-          <p>
-            Use this space to describe your process, safety standards, planning
-            habits, and the values that guide each project.
-          </p>
-        </div>
+
+        <div
+          className="about-image"
+          role="img"
+          aria-label="Construction professional wearing a hard hat"
+        />
       </section>
     </main>
   );
