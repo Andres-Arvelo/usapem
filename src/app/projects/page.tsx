@@ -1,38 +1,44 @@
+import type { CSSProperties } from "react";
+import Link from "next/link";
 import { SiteHeader } from "../components/SiteHeader";
-
-const projects = [
-  "Commercial build-out",
-  "Residential development",
-  "Infrastructure improvement",
-];
+import { projectDescription, projects } from "./project-data";
 
 export default function ProjectsPage() {
   return (
     <main className="site-shell">
       <SiteHeader activePath="/projects" />
 
-      <section className="page-hero">
-        <p className="page-kicker">Projects</p>
-        <h1>A place to showcase completed and current work.</h1>
-        <p>
-          Add your project photos, names, locations, and descriptions here as
-          the portfolio grows.
-        </p>
-      </section>
+      <section className="projects-page" aria-labelledby="projects-title">
+        <h1 id="projects-title">PROJECTS</h1>
 
-      <section className="project-grid" aria-label="Featured projects">
-        {projects.map((project, index) => (
-          <article className="project-card" key={project}>
-            <div className="project-image">Project {index + 1}</div>
-            <div>
-              <h2>{project}</h2>
-              <p>
-                Add a brief project summary, scope, timeline, and any standout
-                details you want visitors to notice.
-              </p>
-            </div>
-          </article>
-        ))}
+        <div className="project-grid" aria-label="Featured projects">
+          {projects.map((project, index) => (
+            <Link
+              className="project-card project-card-link"
+              href={`/projects/${project.slug}`}
+              key={project.slug}
+            >
+              <article>
+                <div
+                  className="project-image"
+                  aria-label={`${project.name} cover image`}
+                  role="img"
+                  style={
+                    {
+                      "--project-image": `url("${project.coverImage}")`,
+                    } as CSSProperties
+                  }
+                >
+                  Project {index + 1}
+                </div>
+                <div className="project-card-copy">
+                  <h2>{project.name}</h2>
+                  <p>{projectDescription}</p>
+                </div>
+              </article>
+            </Link>
+          ))}
+        </div>
       </section>
     </main>
   );
