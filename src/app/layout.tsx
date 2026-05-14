@@ -4,6 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "PEM",
   description: "PEM home page",
+  icons: {
+    icon: "/pem-favicon.svg",
+    shortcut: "/pem-favicon.svg",
+    apple: "/pem-favicon.svg",
+  },
 };
 
 export default function RootLayout({
