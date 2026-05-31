@@ -63,6 +63,8 @@ export async function POST(request: Request) {
     });
 
     if (error) {
+      console.error("Resend contact form error:", error);
+
       return Response.json(
         { success: false, error: "Failed to send message." },
         { status: 500 },
@@ -70,7 +72,9 @@ export async function POST(request: Request) {
     }
 
     return Response.json({ success: true });
-  } catch {
+  } catch (error) {
+    console.error("Contact form route error:", error);
+
     return Response.json(
       { success: false, error: "Failed to send message." },
       { status: 500 },
