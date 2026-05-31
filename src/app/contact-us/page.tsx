@@ -1,4 +1,5 @@
 import { SiteHeader } from "../components/SiteHeader";
+import { ContactForm } from "./ContactForm";
 
 export default function ContactUsPage() {
   return (
@@ -9,23 +10,7 @@ export default function ContactUsPage() {
         <h1 id="contact-title">CONTACT US</h1>
 
         <div className="contact-layout">
-          <form className="contact-form">
-            <h2>Drop us a line!</h2>
-
-            <input type="text" name="name" placeholder="Name" />
-            <input type="email" name="email" placeholder="Email*" required />
-            <textarea name="message" rows={7} placeholder="Message" />
-
-            <button type="submit">SEND</button>
-
-            <p className="contact-recaptcha">
-              This site is protected by reCAPTCHA and the Google{" "}
-              <a href="https://policies.google.com/privacy">Privacy Policy</a>{" "}
-              and{" "}
-              <a href="https://policies.google.com/terms">Terms of Service</a>{" "}
-              apply.
-            </p>
-          </form>
+          <ContactForm />
 
           <div className="contact-info">
             <h2>CONTACT INFO</h2>

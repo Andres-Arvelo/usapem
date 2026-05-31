@@ -748,6 +748,26 @@ a {
   letter-spacing: 1px;
 }
 
+.contact-form button:disabled {
+  cursor: wait;
+  opacity: 0.68;
+}
+
+.contact-status {
+  margin: -4px 0 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.contact-status-sent {
+  color: #216e39;
+}
+
+.contact-status-error {
+  color: #b42318;
+}
+
 .contact-recaptcha {
   max-width: 470px;
   margin: 6px auto 0;
